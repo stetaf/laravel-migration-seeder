@@ -19,8 +19,8 @@ class PackageSeeder extends Seeder
             $p->name = $faker->company() . ' ' . $p->type;
             $p->city = $faker->city();
             $p->address = $faker->address();
-            $p->price = $faker->randomNumber(90, 600);
-            $p->price = $faker->randomNumber(0,1);
+            $p->price = $faker->numberBetween(90, 400);
+            $p->breakfast = $faker->numberBetween(0,1);
             $p->save();
         }
     }
