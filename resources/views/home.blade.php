@@ -13,13 +13,20 @@
                                 <h4>{{ $package->name }}</h4>
                                 <span class="address">{{ $package->city }}, {{ $package->address }}</span>
                             </div>
-                            <div class="bottom">
-                                <span class="price">&euro; <strong>{{ $package->price }}</strong>/notte a persona</span>
-                                @if ($package->breakfast) 
-                                    <span class="breakfast">Colazione <strong>inclusa</strong></span>
-                                @else
-                                    <span class="breakfast">Colazione non inclusa</span>
-                                @endif
+                            <div class="bottom d-flex justify-content-between">
+                                <div class="left">
+                                    <span class="price">&euro; <strong>{{ $package->price }}</strong>/notte a persona</span>
+                                    @if ($package->breakfast) 
+                                        <span class="breakfast">Colazione <strong>inclusa</strong></span>
+                                    @else
+                                        <span class="breakfast">Colazione non inclusa</span>
+                                    @endif
+                                </div>
+                                <div class="right">
+                                    @for ($i = 0; $i < $package['rating']; $i++)
+                                        <i class="fas fa-star"></i>
+                                    @endfor
+                                </div>
                             </div>
                         </div>
                     </div>

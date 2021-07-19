@@ -14,7 +14,9 @@ main {
             border-bottom-left-radius: 5px;
         }
         .data {
+            width: 100%;
             padding: 10px;
+
             span { 
                 color: black;
             }
@@ -33,6 +35,14 @@ main {
             .price strong,
             .breakfast strong {
                 color: #09a9d1;
+            }
+
+            .bottom { 
+                .right { 
+                    display: flex;
+                    align-items: flex-end;
+                    margin: 3px;
+                }
             }
         }
     }

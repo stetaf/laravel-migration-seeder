@@ -47,6 +47,7 @@ main .package img {
   border-bottom-left-radius: 5px;
 }
 main .package .data {
+  width: 100%;
   padding: 10px;
 }
 main .package .data span {
@@ -67,4 +68,9 @@ main .package .data .address {
 main .package .data .price strong,
 main .package .data .breakfast strong {
   color: #09a9d1;
+}
+main .package .data .bottom .right {
+  display: flex;
+  align-items: flex-end;
+  margin: 3px;
 }
