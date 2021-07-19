@@ -6,19 +6,19 @@
         <div class="links">
             <ul>
                 <li>
-                    <a href="#">Home</a>
+                    <a href="{{ route('home') }}">Home</a>
                 </li>
                 <li>
-                    <a href="#">Hotel</a>
+                    <a href="{{ route('packages.hotels') }}">Hotel</a>
                 </li>
                 <li>
-                    <a href="#">Residence</a>
+                    <a href="{{ route('packages.residence') }}">Residence</a>
                 </li>
                 <li>
-                    <a href="#">B&B</a>
+                    <a href="{{ route('packages.b&b') }}">B&B</a>
                 </li>
                 <li>
-                    <a href="#">Apartments</a>
+                    <a href="{{ route('packages.apartments') }}">Apartments</a>
                 </li>
             </ul>
         </div>
