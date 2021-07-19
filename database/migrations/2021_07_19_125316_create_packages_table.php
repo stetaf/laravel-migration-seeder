@@ -20,7 +20,7 @@ class CreatePackagesTable extends Migration
             $table->string('city');
             $table->string('address');
             $table->smallInteger('price');
-            $table->tinyInteger('breakfast');
+            $table->tinyInteger('breakfast')->default(0);
             $table->timestamps();
         });
     }
