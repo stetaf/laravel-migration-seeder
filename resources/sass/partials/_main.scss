@@ -1,0 +1,39 @@
+main {
+    padding: 15px 0;
+    color: #09a9d1;
+
+    .package {
+        display: flex;
+        border: 1px solid #dedede;
+        margin: 10px 0;
+        border-radius: 5px;
+        
+        img { 
+            width: 200px;
+            border-top-left-radius: 5px;
+            border-bottom-left-radius: 5px;
+        }
+        .data {
+            padding: 10px;
+            span { 
+                color: black;
+            }
+            h4 {
+                margin: unset;
+            }
+            .address,
+            .price,
+            .breakfast {
+                display: block;
+            }
+            .address { 
+                font-style: italic;
+                font-size: 13px;
+            }
+            .price strong,
+            .breakfast strong {
+                color: #09a9d1;
+            }
+        }
+    }
+}
