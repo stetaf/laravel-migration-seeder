@@ -21,45 +21,33 @@ Route::get('/', function () {
 })->name('home');
 
 Route::get('/hotel', function () {
-    $packages = Package::all();
+    $packages = Package::where('type', 'hotel')
+                        ->get();
     $type = 'Hotel';
-
-    $filtered = $packages->filter(function ($package, $key) {
-        return strtolower($package['type']) == 'hotel';
-    });
     
-    return view('packages.type', compact('filtered', 'type'));
+    return view('packages.type', compact('packages', 'type'));
 })->name('packages.hotels');
 
 Route::get('/residence', function () {
-    $packages = Package::all();
+    $packages = Package::where('type', 'residence')
+                        ->get();
     $type = 'Residence';
-
-    $filtered = $packages->filter(function ($package, $key) {
-        return strtolower($package['type']) == 'residence';
-    });
     
-    return view('packages.type', compact('filtered', 'type'));
+    return view('packages.type', compact('packages', 'type'));
 })->name('packages.residence');
 
 Route::get('/b&b', function () {
-    $packages = Package::all();
+    $packages = Package::where('type', 'b&b')
+                        ->get();
     $type = 'B&B';
-
-    $filtered = $packages->filter(function ($package, $key) {
-        return strtolower($package['type']) == 'b&b';
-    });
     
-    return view('packages.type', compact('filtered', 'type'));
+    return view('packages.type', compact('packages', 'type'));
 })->name('packages.b&b');
 
 Route::get('/apartments', function () {
-    $packages = Package::all();
-    $type = 'Appartamenti';
-
-    $filtered = $packages->filter(function ($package, $key) {
-        return strtolower($package['type']) == 'apartments';
-    });
+    $packages = Package::where('type', 'apartments')
+                        ->get();
+    $type = 'Apartments';
     
-    return view('packages.type', compact('filtered', 'type'));
+    return view('packages.type', compact('packages', 'type'));
 })->name('packages.apartments');

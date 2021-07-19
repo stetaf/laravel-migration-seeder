@@ -4,7 +4,7 @@
     <div class="container">
         <h1>I nostri {{ $type }}</h1>
         <div class="row">
-            @foreach ($filtered as $package) 
+            @foreach ($packages as $package) 
                 <div class="col-12 col-md-6">
                     <div class="package">
                         <img src="{{ $package->image }}" alt="">
