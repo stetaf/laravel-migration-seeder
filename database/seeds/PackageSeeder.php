@@ -22,6 +22,7 @@ class PackageSeeder extends Seeder
             $p->phone = $faker->phoneNumber();
             $p->price = $faker->numberBetween(90, 400);
             $p->breakfast = $faker->numberBetween(0,1);
+            $p->image = "https://source.unsplash.com/400x400/?hotel";
             $p->save();
         }
     }

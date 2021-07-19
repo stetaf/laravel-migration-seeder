@@ -22,6 +22,7 @@ class CreatePackagesTable extends Migration
             $table->string('phone');
             $table->smallInteger('price');
             $table->tinyInteger('breakfast')->default(0);
+            $table->string('image');
             $table->timestamps();
         });
     }
