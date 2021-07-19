@@ -18,7 +18,8 @@ class PackageSeeder extends Seeder
             $p->type = $faker->randomElement(['Hotel', 'Residence', 'B&B', 'Apartments']);
             $p->name = $faker->company() . ' ' . $p->type;
             $p->city = $faker->city();
-            $p->address = $faker->address();
+            $p->address = $faker->streetAddress();
+            $p->phone = $faker->phoneNumber();
             $p->price = $faker->numberBetween(90, 400);
             $p->breakfast = $faker->numberBetween(0,1);
             $p->save();
