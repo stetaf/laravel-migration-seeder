@@ -19,6 +19,7 @@ class CreatePackagesTable extends Migration
             $table->string('type');
             $table->string('city');
             $table->string('address');
+            $table->string('phone');
             $table->smallInteger('price');
             $table->tinyInteger('breakfast')->default(0);
             $table->timestamps();
